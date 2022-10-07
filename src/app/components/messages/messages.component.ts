@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MessagesService } from 'src/app/services/messages.service';
 
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+// import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-messages',
@@ -9,8 +10,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class MessagesComponent implements OnInit {
 
-  faTimes = faTimes;
-  constructor() { }
+  // faTimes = faTimes; Não funcionou com fontawesome
+  constructor(public messagesService: MessagesService) { }
 
   ngOnInit(): void {
   }
