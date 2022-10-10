@@ -4,12 +4,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MomentService } from 'src/app/services/moment.service';
 import { Moment } from 'src/app/Moment';
 
+import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-moment',
   templateUrl: './moment.component.html',
   styleUrls: ['./moment.component.css']
 })
 export class MomentComponent implements OnInit {
+
+  baseApiUrl = environment.baseApiUrl;
 
   moment!: Moment;
   constructor(
