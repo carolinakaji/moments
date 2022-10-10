@@ -13,7 +13,12 @@
     <h3>Ações:</h3>
     <div class="buttons">
       <p><a href="/moments/edit{{ moment.id }}" class="edit-btn">Editar</a></p>
-      <input type="button" class="remove-btn" value="Excluir" />
+      <input
+        type="button"
+        class="remove-btn"
+        value="Excluir"
+        (click)="removeHandler(moment.id!)"
+      />
     </div>
   </div>
   <!-- TODO comentários -->
