@@ -12,6 +12,7 @@ import { Moment } from 'src/app/Moment';
 export class MomentFormComponent implements OnInit {
   @Input() btnText!: string; // o ! mostra que não precisa ser inicializado, vai ser inicializado depois
   @Output() onSubmit = new EventEmitter<Moment>();
+  @Input() momentData: Moment | null = null;
 
   momentForm!: FormGroup;
 
