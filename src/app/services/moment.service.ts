@@ -18,9 +18,15 @@ export class MomentService {
     private http: HttpClient,
   ) { }
 
-  // GET - Recupera o momento do banco de dados
+  // GET - Recupera os momentos do banco de dados
   getMoments(): Observable<Response<Moment[]>> {
     return this.http.get<Response<Moment[]>>(this.apiUrl);
+  }
+
+  // GET - Recupera o momento do banco de dados, de acordo com o id
+  getMoment(id: number): Observable<Response<Moment>> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Response<Moment>>(url);
   }
 
   // POST - Criar o momento.
