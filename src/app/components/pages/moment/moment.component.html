@@ -12,7 +12,11 @@
   <div class="actions">
     <h3>Ações:</h3>
     <div class="buttons">
-      <p><a href="/moments/edit{{ moment.id }}" class="edit-btn">Editar</a></p>
+      <p>
+        <a routerLink="/moments/edit/{{ moment.id }}" class="edit-btn"
+          >Editar</a
+        >
+      </p>
       <input
         type="button"
         class="remove-btn"
