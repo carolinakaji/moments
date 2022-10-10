@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   baseApiUrl = environment.baseApiUrl;
 
   // TODO: search
-
+  searchTerm: string = '';
 
   constructor(private momentService: MomentService) { }
 
@@ -31,6 +31,15 @@ export class HomeComponent implements OnInit {
       this.moments = data;
     });
 
+  }
+
+  search(event: Event): void {
+    // No typescripte, para pegar o valor do evento, é necessário fazer os passos:
+    const target = event.target as HTMLInputElement; // declara que é um input
+    const value = target.value // pega o valor
+
+    // Filtra o allMoments, onde o moment.title que vai ser exibido tem que ter um valor incluso, que é o includes(). O includes, verifica se no moment.title, possui o value, recuperado do input.
+    this.moments = this.allMoments.filter((moment) => moment.title.toLowerCase().includes(value));
   }
 
 }
