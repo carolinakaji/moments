@@ -23,9 +23,9 @@ export class MomentFormComponent implements OnInit {
     // Declarar todos campos que pode e terá no formulário
     // FormControl, controla o inuput por meio das validações
     this.momentForm = new FormGroup({
-      id: new FormControl(''),
-      title: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required]),
+      id: new FormControl(this.momentData ? this.momentData.id : ''),
+      title: new FormControl(this.momentData ? this.momentData.title : '', [Validators.required]),
+      description: new FormControl(this.momentData ? this.momentData.description : '', [Validators.required]),
       image: new FormControl(''),
     });
   }
