@@ -1,5 +1,7 @@
 # Moments
 
+Following the course form [Matheus Battisti - Hora de Codar](https://www.youtube.com/c/MatheusBattisti). It was created a SPA with Angular focusing on CRUD.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
 ## Development server
